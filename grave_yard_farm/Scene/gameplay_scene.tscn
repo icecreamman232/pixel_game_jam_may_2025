@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://dl036htos78dw"]
+
+[ext_resource type="SpriteFrames" uid="uid://c1vr053bscxbw" path="res://Art/player.aseprite" id="1_tntwh"]
+[ext_resource type="Script" uid="uid://ukj0yys7gvet" path="res://Script/player_movement.gd" id="2_ydmtd"]
+
+[node name="GameplayScene" type="Node2D"]
+
+[node name="Player" type="Node2D" parent="."]
+
+[node name="Visual" type="AnimatedSprite2D" parent="Player"]
+sprite_frames = ExtResource("1_tntwh")
+
+[node name="Movement" type="Node2D" parent="Player"]
+script = ExtResource("2_ydmtd")
+
+[node name="Camera2D" type="Camera2D" parent="."]
